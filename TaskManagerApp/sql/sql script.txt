@@ -1,0 +1,6 @@
+create database taskmanager;
+use taskmanager;
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' IDENTIFIED BY 'root' WITH GRANT OPTION;
+create table task_list(task_id int not null auto_increment, task_name varchar(100) not null, task_description text,task_priority varchar(20),task_status varchar(20),task_start_time datetime not null,task_end_time datetime not null,task_archived bool default false,user_name varchar(20) ,primary key(task_id));
+
+select * from task_list;
